@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* pc해상도 서식 */
+
+/* @media screen and (min-width:1025px) {태블릿, 모바일에 미디어쿼리를 적용하므로 pc버전은 안써도됨 */
+  body{
+    /* background: #ff0; */
+  }
+  header{
+    width: 100%;height: 170px;
+  }
+  .h_top{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+.h_top h1{
+  width: 200px;
+  /* 수직정렬 방법 3가지 */
+  /* position: relative;top:40px; */
+  /* padding-top: 40px; */
+  transform: translateY(40px);
+}
+.h_top h1 img {width: 100%;}
+.lnb{position: absolute;right: 0;top: 30px;}
+.lnb > ul{
+  display: flex;
+}
+.lnb li{margin: 0 10px;}
+.lnb>ul a{
+  color: #fff;
+  font-size: 13px;
+}
+.lnb>ul a:hover{
+  text-decoration: underline; /*사용성을 위해*/
+}
+header fieldset{
+  position: absolute;
+  right: -15px;top: 60px;
+}
+#search{
+  width: 230px;height: 30px;
+  border-radius: 26px;
+  border: none;
+  text-align: center;
+}
+label.fa-search{
+  font-size: 22px;
+  transform: translate(-36px, 5px); /*검색버튼 안으로*/
+}
+
+/* 메인내비게이션 서식 */
+.h_bottom{
+  width: 100%;height: 48px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.95);
+  position: absolute;top: 122px;
+  z-index: 10;
+  transition: 0.5s
+}
+.h_bottom:hover{
+  height: 420px;
+}
+.gnb{
+  background: #4b4b4b;
+  height: 48px;
+}
+.gnb>ul{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.gnb>ul>li{
+  line-height: 48px;
+  text-align: center;
+  position: relative;/*서브메뉴의 기준 ----*/
+  padding: 0 40px;
+}
+.gnb>ul>li>a{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.gnb>ul>li>a:hover{
+  text-decoration: underline;
+}
+.gnb>ul>li>a::after{
+  content: '';display: block;
+  width: 1px;height: 10px;
+  background: #ccc;
+  position: relative;top: -28px;
+}
+.gnb>ul>li:first-child>a::after{left: 100px;}
+.gnb>ul>li:nth-child(2)>a::after{left: 80px;}
+.gnb>ul>li:nth-child(3)>a::after{left: 75px;}
+.gnb>ul>li:nth-child(4)>a::after{left: 70px;}
+.gnb>ul>li:nth-child(5)>a::after{left: 85px;}
+.gnb>ul>li:last-child>a::after{display: none;}
+
+/* 서브메뉴 */
+.sub{position:absolute;left: 0;width: 100%;}
+.sub a{font-size: 14px;}
+.sub a:hover{text-decoration: underline;}
+
+/* 무료체험 서식 */
+.free_ex>article{
+  width: 1200px;
+  height: 490px;
+  margin: 0 auto;
+}
+.free_ex>article>img{
+  float: left;
+  width: 430px;
+  padding: 30px 30px 0 120px;
+}
+.ex_right{
+  float: left;
+  width: 500px;
+  text-align: center;
+  padding-top: 30px;
+  color: #fff;
+}
+.ex_right>h3{
+  font-size: 34px;
+  font-weight: 300;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.ex_right>h3>img{
+  width: 60px;
+}
+.p01{
+  font-size: 16px;
+  line-height: 30px;
+  padding: 30px 0 90px 0;
+}
+
+/* product 서식 */
+.product{
+  width: 1200px;
+  margin: 50px auto;
+}
+.product>h2{
+  text-align: center;
+  font-size: 36px;
+  padding: 20px 0 60px 0;
+  font-weight: 200;
+}
+.product>h2>img{
+  width: 40px;
+  padding-right: 10px;
+  position: relative;top: 8px;
+}
+.p02{text-align: center;}
+.product_list{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.product_list>li{
+  width: 50%;
+  text-align: center;
+}
+.product_list img{
+  width: 300px;
+  float: left;
+}
+.product .info{
+  padding-top: 40px;
+  line-height: 30px;
+}
+.product .info h3{
+  font-size: 18px;
+}
+.product .info p{
+  font-size: 16px;
+}
+/* 가격서식 */
+.price{
+  padding-top: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #f00;
+  display: inline-block;
+}
+.info p:last-of-type{
+  padding-top:30px;
+}
+
+/*story 서식*/
+.story{
+  width: 100%;
+  height: 580px;
+  background: #ccc;
+}
+.story>h2{display: none;}
+.story>article{
+  width: 1200px;
+  margin: 0 auto;
+}
+.story_left{
+  float: left;
+  text-align: center;
+  padding-left: 100px;
+}
+.story_left>h2{
+  font-size: 36px;
+  color: #333;
+  font-weight: 200;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+.story_left>h2 img{width: 40px;}
+.story_left>p{
+  font-size: 18px;
+  line-height: 30px;
+  padding-bottom: 90px;
+}
+.story .s_img{
+  float: right;
+  width: 430px;
+  padding: 70px 120px 0 0;
+}
+
+/* 인스타 갤러리 서식 */
+.gallery_wrap{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.gallery_wrap>h2{
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  font-weight: normal;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  text-transform: uppercase;
+}
+.gallery_wrap>h2 img{
+  /* position: relative;top: 7px; */
+  transform: translateY(7px);
+}
+.id_name{
+  display: block;
+  font-size: 16px;
+  padding: 10px 0;
+  text-transform: lowercase;
+}
+/* 갤러리 그리드 레이아웃 */
+.gallery{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  grid-gap: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
+}
+.gallery>li{
+  overflow: hidden;
+}
+.gallery>li>a{}
+.gallery>li>a img{
+  width: 100%;
+  object-fit: cover; /* object-fit: 이미지를 비율로 맞춰서 넣음*/
+  transition: 0.3s;
+}
+.gallery>li:hover img{
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+/* } */
+
